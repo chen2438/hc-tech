@@ -1,11 +1,11 @@
 export const site = {
-  name: 'Haotian Chen',
-  businessName: 'HC Tech Services',
-  title: 'Independent Software & AI Developer',
+  name: 'Vayki Studio',
+  businessName: 'Vayki Studio',
+  title: 'Independent Software & AI Studio',
   description:
     'Independent software and AI developer building custom software, AI systems, intelligent agents and business automation.',
-  siteUrl: 'https://hc-tech.vayki.com',
-  email: 'hc_tech@vayki.com',
+  siteUrl: 'https://studio.vayki.com',
+  email: 'studio@vayki.com',
   location: 'United Kingdom',
   navigation: [
     { label: 'Home', href: '/' },

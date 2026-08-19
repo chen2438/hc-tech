@@ -1,6 +1,6 @@
-# HC Tech Services
+# Vayki Studio
 
-A static, typography-led portfolio and consultancy website for Haotian Chen / HC Tech Services. It is built with Astro, TypeScript and Tailwind CSS, with no client-side framework and no required runtime JavaScript.
+A static, typography-led software and AI consultancy website for Vayki Studio. It is built with Astro, TypeScript and Tailwind CSS, with no client-side framework and no required runtime JavaScript.
 
 ## Technology
 
