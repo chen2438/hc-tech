@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Background from '../components/Background.astro';
+import Principles from '../components/Principles.astro';
+import TechnologyList from '../components/TechnologyList.astro';
+import CTA from '../components/CTA.astro';
+---
+<BaseLayout title="About — Haotian Chen" description="About Haotian Chen, an independent software and AI developer based in the UK." pathname="/about">
+  <PageHeader eyebrow="02 / About" title="Software, AI and the systems between them." description="I'm Haotian Chen, an independent developer working under the name HC Tech Services. I design practical software, AI and automation from first principles through to implementation." />
+  <section class="manifesto section shell" aria-labelledby="philosophy-title">
+    <p class="eyebrow">Engineering philosophy</p>
+    <div><h2 id="philosophy-title">Useful technology starts with understanding the problem.</h2><div class="copy"><p>I work across software development, AI, automation, infrastructure and technical consulting. That breadth helps me see where a custom system is genuinely useful—and where a simpler answer is better.</p><p>My role is direct and hands-on. I clarify the requirement, make the trade-offs visible and build a solution that can be understood and maintained after launch.</p></div></div>
+  </section>
+  <Background />
+  <Principles />
+  <TechnologyList />
+  <CTA />
+</BaseLayout>
+<style>
+  .manifesto { display: grid; grid-template-columns: 1fr 3fr; gap: clamp(2rem, 6vw, 8rem); }
+  .manifesto > div > h2 { max-width: 14ch; margin: 0 0 clamp(3rem, 7vw, 7rem); font-family: Iowan Old Style, serif; font-size: clamp(3rem, 6.5vw, 7rem); line-height: .96; letter-spacing: -.05em; font-weight: 400; }
+  .copy { max-width: 60ch; color: var(--muted); font-size: 1.12rem; }
+  @media (max-width: 720px) { .manifesto { grid-template-columns: 1fr; } }
+</style>

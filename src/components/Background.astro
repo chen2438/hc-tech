@@ -1,0 +1,23 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="section shell rule" aria-labelledby="background-title">
+  <div class="section-head">
+    <p class="eyebrow">Background</p>
+    <h2 class="section-title" id="background-title">Grounded in engineering</h2>
+  </div>
+  <div class="background-grid">
+    <div><p class="meta">Education</p><p class="degree">{site.background.education}</p><p>{site.background.institution}</p></div>
+    <div><p class="meta">Areas of focus</p><ul>{site.background.focus.map((item) => <li>{item}</li>)}</ul></div>
+  </div>
+</section>
+
+<style>
+  .background-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(3rem, 9vw, 12rem); }
+  .degree { max-width: 12ch; margin: 2rem 0 .5rem; font-family: Iowan Old Style, serif; font-size: clamp(2.3rem, 4.2vw, 5rem); line-height: 1; letter-spacing: -.04em; }
+  .degree + p { color: var(--muted); }
+  ul { margin: 2rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  li { padding-block: 1rem; border-bottom: 1px solid var(--line); font-size: clamp(1.1rem, 1.8vw, 1.5rem); }
+  @media (max-width: 720px) { .background-grid { grid-template-columns: 1fr; } }
+</style>

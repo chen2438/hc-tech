@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hc-tech.vayki.com/sitemap-index.xml

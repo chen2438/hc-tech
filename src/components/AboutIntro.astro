@@ -1,0 +1,29 @@
+---
+---
+
+<section class="about section shell" aria-labelledby="about-title">
+  <div class="section-head">
+    <p class="eyebrow">04 / About</p>
+    <h2 class="section-title" id="about-title">Who I am</h2>
+  </div>
+  <div class="about-grid">
+    <div class="copy">
+      <p>I'm an independent software and AI developer based in the UK, working under the name HC Tech Services.</p>
+      <p>I focus on building practical technology: software that solves a specific problem, AI systems that have a clear purpose, and automation that removes unnecessary manual work.</p>
+      <p>My work spans software engineering, artificial intelligence, backend systems, APIs, intelligent agents and infrastructure automation.</p>
+      <p>I prefer working directly with clients from understanding the problem through to designing and implementing the solution.</p>
+      <a class="arrow-link" href="/about">More about my work <span aria-hidden="true">→</span></a>
+    </div>
+    <blockquote>You work directly with the person building your system.</blockquote>
+  </div>
+</section>
+
+<style>
+  .about-grid { display: grid; grid-template-columns: 1fr 1.55fr; gap: clamp(3rem, 8vw, 10rem); align-items: start; }
+  .copy { max-width: 58ch; }
+  .copy p { margin: 0 0 1.2rem; color: var(--muted); }
+  .copy p:first-child { color: var(--ink); font-size: 1.2rem; }
+  .copy .arrow-link { margin-top: 1.5rem; color: var(--ink); }
+  blockquote { margin: 0; font-family: Iowan Old Style, serif; font-size: clamp(3rem, 6.5vw, 7rem); line-height: .95; letter-spacing: -.05em; }
+  @media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; } blockquote { order: -1; } }
+</style>
