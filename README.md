@@ -2,6 +2,10 @@
 
 A static, typography-led software and AI consultancy website for Vayki Studio. It is built with Astro, TypeScript and Tailwind CSS, with no client-side framework and no required runtime JavaScript.
 
+## Business description
+
+Vayki Studio provides custom software development and technical consultancy. Services include web applications, backend systems, AI integrations, workflow automation, and advice on software architecture and implementation.
+
 ## Technology
 
 - Astro static site generation
