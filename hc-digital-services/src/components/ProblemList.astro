@@ -1,0 +1,25 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="problems section shell" aria-labelledby="problems-title">
+  <div class="section-head">
+    <p class="eyebrow">02 / Starting points</p>
+    <h2 class="section-title" id="problems-title">Does this sound familiar?</h2>
+  </div>
+  <ol>
+    {site.problems.map((problem, index) => (
+      <li><span class="meta">{String(index + 1).padStart(2, '0')}</span><p>{problem}</p></li>
+    ))}
+  </ol>
+</section>
+
+<style>
+  .problems { background: var(--ink); color: var(--paper); }
+  .problems .eyebrow { color: #a7a9a3; }
+  ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid #454642; }
+  li { display: grid; grid-template-columns: minmax(5rem, .55fr) 3fr; gap: clamp(1.5rem, 4vw, 5rem); align-items: baseline; border-bottom: 1px solid #454642; padding-block: clamp(1.5rem, 3vw, 2.5rem); }
+  li .meta { color: #a7a9a3; }
+  li p { max-width: 32ch; margin: 0; font-family: Iowan Old Style, serif; font-size: clamp(1.75rem, 3.2vw, 3.75rem); line-height: 1.08; letter-spacing: -.03em; transition: transform .25s var(--ease); }
+  li:hover p { transform: translateX(.5rem); }
+</style>

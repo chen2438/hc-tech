@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title="Contact — HC Digital Services" description="Discuss a software, AI or automation project with HC Digital Services." pathname="/contact">
+  <PageHeader eyebrow="03 / Contact" title="Let's talk." description="If you have a software, AI or automation project in mind, send me a message. A clear outline is enough to start." />
+  <section class="contact section shell" aria-labelledby="form-title">
+    <aside>
+      <p class="eyebrow">Direct contact</p>
+      <h2>Prefer email?</h2>
+      <a class="email" href={`mailto:${site.email}`}>{site.email}</a>
+    </aside>
+    <!-- Replace this mailto action with POST /api/contact when a Cloudflare Pages Function is added. -->
+    <form id="contact-form" method="post" action={`mailto:${site.email}`} enctype="text/plain">
+      <h2 id="form-title" class="sr-only">Project enquiry form</h2>
+      <label><span>Name</span><input name="name" type="text" autocomplete="name" required /></label>
+      <label><span>Email</span><input name="email" type="email" autocomplete="email" required /></label>
+      <label><span>Company / organisation <small>(optional)</small></span><input name="company" type="text" autocomplete="organization" /></label>
+      <label><span>What would you like to build?</span><input name="project" type="text" required /></label>
+      <label><span>Message</span><textarea name="message" rows="6" required></textarea></label>
+      <p class="form-note">Submitting opens your email application. No information is stored by this website.</p>
+      <button type="submit">Send enquiry <span aria-hidden="true">→</span></button>
+    </form>
+  </section>
+</BaseLayout>
+<style>
+  .contact { display: grid; grid-template-columns: 1fr 2fr; gap: clamp(4rem, 9vw, 12rem); }
+  aside h2 { margin: 2rem 0 1rem; font-family: Iowan Old Style, serif; font-size: clamp(2.2rem, 4vw, 4.5rem); font-weight: 400; letter-spacing: -.04em; }
+  .email { border-bottom: 1px solid currentColor; word-break: break-word; }
+  form { border-top: 1px solid var(--ink); }
+  label { display: block; padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
+  label span { display: block; margin-bottom: .8rem; font-family: "SFMono-Regular", monospace; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  label small { font: inherit; text-transform: none; }
+  input, textarea { width: 100%; padding: .25rem 0; resize: vertical; border: 0; outline: 0; background: transparent; color: var(--ink); font-family: Iowan Old Style, serif; font-size: clamp(1.4rem, 2.3vw, 2.2rem); }
+  label:focus-within { border-color: var(--ink); }
+  .form-note { max-width: 52ch; margin: 1.4rem 0; color: var(--muted); font-size: .78rem; }
+  button { display: inline-flex; gap: 1.5rem; align-items: center; margin-top: 1.5rem; padding: 1rem 0 .5rem; border: 0; border-bottom: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; font-weight: 600; }
+  button span { transition: transform .25s var(--ease); } button:hover span { transform: translateX(.35rem); }
+  @media (max-width: 760px) { .contact { grid-template-columns: 1fr; } }
+</style>

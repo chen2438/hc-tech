@@ -1,0 +1,19 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="section shell rule" aria-labelledby="technology-title">
+  <div class="section-head">
+    <p class="eyebrow">Technology</p>
+    <h2 class="section-title" id="technology-title">Tools I work with</h2>
+  </div>
+  <dl>{site.technologies.map((group) => <div><dt>{group.category}</dt><dd>{group.items.join(' · ')}</dd></div>)}</dl>
+</section>
+
+<style>
+  dl { margin: 0; border-top: 1px solid var(--line); }
+  dl div { display: grid; grid-template-columns: 1fr 3fr; gap: 2rem; padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
+  dt { font-family: "SFMono-Regular", monospace; font-size: .72rem; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+  dd { margin: 0; font-family: Iowan Old Style, serif; font-size: clamp(1.6rem, 3vw, 3.4rem); line-height: 1.1; letter-spacing: -.025em; }
+  @media (max-width: 600px) { dl div { grid-template-columns: 1fr; gap: .8rem; } }
+</style>

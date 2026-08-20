@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hc-digital.vayki.com/sitemap-index.xml

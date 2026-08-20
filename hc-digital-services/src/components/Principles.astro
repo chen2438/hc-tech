@@ -1,0 +1,24 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="section shell rule" aria-labelledby="principles-title">
+  <div class="section-head">
+    <p class="eyebrow">Principles</p>
+    <h2 class="section-title" id="principles-title">How I work</h2>
+  </div>
+  <div class="principles">
+    {site.principles.map((principle) => (
+      <article><p class="meta">{principle.number}</p><h3>{principle.title}</h3><p>{principle.description}</p></article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .principles { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  article { min-height: 21rem; display: flex; flex-direction: column; padding: clamp(1.25rem, 2.6vw, 2.5rem); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h3 { margin: 2rem 0 1rem; font-family: Iowan Old Style, serif; font-size: clamp(2rem, 3vw, 3.5rem); font-weight: 400; letter-spacing: -.035em; }
+  article > p:last-child { margin: auto 0 0; color: var(--muted); }
+  @media (max-width: 900px) { .principles { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .principles { grid-template-columns: 1fr; } article { min-height: 17rem; } }
+</style>
